@@ -63,3 +63,43 @@ To develop a predictive model that can help financial institutions assess the cr
 
 **Model Used**: Logistic Regression
 
+✅ Accuracy: 1.0
+
+📊 Classification Report:
+precision recall f1-score support
+
+
+       0       1.00      1.00      1.00        54
+       1       1.00      1.00      1.00        51
+
+accuracy                           1.00       105
+
+
+macro avg 1.00 1.00 1.00 105
+weighted avg 1.00 1.00 1.00 105
+
+
+
+---
+
+## 🔍 Sample Prediction
+
+```python
+# Sample input [Age, Sex, Job, Housing, Saving_acc, Checking_acc, Credit_amt, Duration, Purpose]
+sample = [[35, 1, 2, 0, 1, 0, 1500, 12, 3]]
+prediction = model.predict(sample)
+
+print("Predicted Credit Risk:", "Good" if prediction[0] == 1 else "Bad")
+
+
+📁 project structure
+
+credit-risk-prediction/
+│
+├── german_credit_data.csv
+├── credit_risk_prediction.ipynb
+├── README.md
+
+
+
+
